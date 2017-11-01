@@ -1,0 +1,27 @@
+body{
+    background: lightblue;
+    margin: 0;
+}
+
+p{
+    text-align: center;
+}
+
+.video-playlist-table table, th, td{
+    border: 1px solid black;
+}
+
+.main-body img{
+    height: 60%;
+    width: 60%;
+    opacity: 1;
+}
+
+.ranks{
+     color: black;
+     font-family: 'Times New Roman', Times, serif;
+}
+
+.ranks h1{
+    font-family: Courier New, Courier, monospace;
+}

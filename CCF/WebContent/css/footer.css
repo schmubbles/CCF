@@ -1,0 +1,26 @@
+footer {
+    display: block;
+    background-color: black;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.text-center ul{
+    font-family: "courier";
+    color: darkcyan;
+    list-style: none;
+    background-color: black;
+    text-align: center;
+
+}
+
+.contact img{
+    height: 30px;
+    width: 30px;
+    opacity: 1.0;
+    margin-top: 3px;
+}
+
+.contact img:hover{
+    opacity: 0.5;
+}
