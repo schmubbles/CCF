@@ -1,25 +1,39 @@
 package objectLayer;
 
-
+//A class to represent a player that is kept track of in the rankings
 public class Player {
 	private int id = 0;
-	private int rankValue;
-	private String fName = null;
-	private String lName = null;
-	private String username = null;
-	private String password = null;
-	private String email = null;
-	private int type = 0;
+	private double rankValue;
+	private String playerTag;
 	
-	public Player(int id, int rankValue, String fName, String lName, String username, String password, String email, int type) {
+	public Player(int id, double rankValue, String playerTag) {
 		this.id = id;
 		this.rankValue = rankValue;
-		this.fName = fName;
-		this.lName = lName;
-		this.username = username;
-		this.password = password;
-		this.email = email;
-		this.type = type;
+		this.playerTag = playerTag;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public void setId(int newId) {
+		this.id = newId;
+	}
+	
+	public double getRankValue() {
+		return this.rankValue;
+	}
+	
+	public void setRankValue(double rankValue) {
+		this.rankValue = rankValue;
+	}
+	
+	public String getPlayerTag() {
+		return this.playerTag;
+	}
+	
+	public void setPlayerTag(String newTag) {
+		this.playerTag = newTag;
 	}
 	
 	/**
@@ -33,8 +47,8 @@ public class Player {
 		int kValue = 32;
 		
 		//get the rank values for computation
-		int winnerRankValue = this.getRankValue();
-		int loserRankValue = player.getRankValue();
+		double winnerRankValue = this.getRankValue();
+		double loserRankValue = player.getRankValue();
 		
 		double winnerExponent = (double)(loserRankValue - winnerRankValue) / 400.0f;
 		double expectedWinner = (1 / (1 + Math.pow(10, winnerExponent)));
@@ -52,67 +66,4 @@ public class Player {
 		player.setRankValue(loserRankValue);
 	}
 	
-	public int getId() {
-		return this.id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	public int getRankValue() {
-		return this.rankValue;
-	}
-	
-	public void setRankValue(int rankValue) {
-		this.rankValue = rankValue;
-	}
-	
-	public String getfName() {
-		return this.fName;
-	}
-	
-	public void setfName(String fName) {
-		this.fName = fName;
-	}
-	
-	public String getlName() {
-		return this.lName;
-	}
-	
-	public void setlName(String lName) {
-		this.lName = lName;
-	}
-	
-	public String getUsername() {
-		return this.username;
-	}
-	
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	
-	public String getPassword() {
-		return this.password;
-	}
-	
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
-	public String getEmail() {
-		return this.email;
-	}
-	
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public int getType() {
-		return this.type;
-	}
-	
-	public void setType(int type) {
-		this.type = type;
-	}
 }
