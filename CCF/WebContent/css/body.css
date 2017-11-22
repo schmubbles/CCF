@@ -25,3 +25,19 @@ p{
 .ranks h1{
     font-family: Courier New, Courier, monospace;
 }
+
+.loginForm {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    margin-left: 180px;
+}
+
+.submitButton {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    margin-left: 180px;
+}
+
+.AdminLoginTitle h1{
+    text-align: center;
+}
