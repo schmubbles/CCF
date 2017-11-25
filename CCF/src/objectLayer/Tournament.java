@@ -17,6 +17,13 @@ public class Tournament {
 		this.date = date;
 	}
 	
+	public Tournament(int id, String tournamentName, int numParticipants, Date date) {
+		this.id = id;
+		this.tournamentName = tournamentName;
+		this.numParticipants = numParticipants;
+		this.date = date;
+	}
+	
 	public int getId() {
 		return id;
 	}

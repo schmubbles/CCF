@@ -32,4 +32,23 @@ public class TournamentPersists {
 		Tournament t = null;
 		return t;
 	}
+	
+	public Tournament getTournament(String tournamentName) {
+		String query = "SELECT id, Name, numParticipants, Date";
+		ResultSet result = DatabaseAccess.retrieve(query);
+		Tournament tournament = null;
+		try {
+			while (result.next()) {
+				tournament = new Tournament(result.getInt("id"),
+						result.getString("Name"),
+						result.getInt("numParticipants"),
+						result.getDate("Date")
+						);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		DatabaseAccess.disconnect();
+		return tournament;
+	}
 }
