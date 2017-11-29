@@ -34,6 +34,16 @@
                     source = e.target;
                     e.dataTransfer.effectAllowed = 'move';
                 }
+
+                function saveListOrder() {
+                    var playerList = [];
+                    var list = document.getElementsByTagName("li");
+                    document.getElementById("test").innerHTML = "m";
+                    for (var x = 0, y = list.length; x < y; ++x){
+                        playerList.push(list[x].firstChild.nodeValue);
+                    }
+                    document.getElementById("test").innerHTML = playerList;
+                }
             </script>
         </head>
 
@@ -56,7 +66,9 @@
                     <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 5</li>
                     <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 6</li>
                 </ol>
+                <button type = "text" onclick = "saveListOrder()">Save List!</button>
             </div>
+            <div id = "test">test.</div>
         </body>
 
     
