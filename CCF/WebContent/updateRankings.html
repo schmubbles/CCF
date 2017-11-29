@@ -7,7 +7,34 @@
             <link rel="stylesheet" href="css/header.css">
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
-    
+
+            <!-- script from https://jsfiddle.net/hrohxze0/6/ -->
+            <script>
+                function isbefore(a, b) {
+                    if (a.parentNode == b.parentNode) {
+                        for (var next = a; next; next = next.previousSibling) {
+                            if (next === b) { 
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                } 
+
+                function dragenter(e) {
+                    if (isbefore(source, e.target)) {
+                        e.target.parentNode.insertBefore(source, e.target);
+                    }
+                    else {
+                        e.target.parentNode.insertBefore(source, e.target.nextSibling);
+                    }
+                }
+
+                function dragstart(e) {
+                    source = e.target;
+                    e.dataTransfer.effectAllowed = 'move';
+                }
+            </script>
         </head>
 
         <body>
@@ -18,6 +45,17 @@
                     <li class = "videos"><a href = "updateVideos.html">Update Videos</a></li>
                     <li class = "login"><a href = "home.html">Logout</a></li>                      
                 </ul>
+            </div>
+
+            <div class = "players">
+                <ol>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 1</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 2</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 3</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 4</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 5</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 6</li>
+                </ol>
             </div>
         </body>
 
