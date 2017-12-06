@@ -1,12 +1,16 @@
-footer {
+#footer {
+    position: absolute;
+    bottom: 0;
     display: block;
-    background-color: black;
+    width: 100%;
+    background: black;
     margin-bottom: 0px;
     margin-top: 0px;
+    clear: both;
 }
 
 .text-center ul{
-    font-family: "courier";
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     color: darkcyan;
     list-style: none;
     background-color: black;

@@ -1,6 +1,7 @@
 body{
     background: lightblue;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p{
@@ -12,28 +13,66 @@ p{
 }
 
 .main-body img{
-    height: 60%;
-    width: 60%;
+    max-width: 90%;
+    height: auto;
+    width: auto;
     opacity: 1;
 }
 
 .ranks{
      color: black;
-     font-family: 'Times New Roman', Times, serif;
+     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+     text-align: center;
 }
 
 .ranks h1{
-    font-family: Courier New, Courier, monospace;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-align: center;
+}
+
+.ranks table{
+    border: 5px hidden white;
+    text-align: left;
+}
+
+.ranks th, td{
+    border: 1px hidden black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button.accordian {
+    background-color: darkgray;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    border-width: 1px;
+    border: solid;
+    border-bottom: none;
+    border-color: lightblue;
+    transition: 0.4s;
+}
+
+button.accordian.active, button.accordian.hover {
+    background-color: gray;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: lightblue;
+    display: none;
+    align-content: center;
 }
 
 .loginForm {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-align: left;
     margin-left: 180px;
 }
 
 .submitButton {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     text-align: left;
     margin-left: 180px;
 }

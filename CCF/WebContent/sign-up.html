@@ -7,6 +7,13 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
+
+	<script>
+		function signUp(){
+			document.getElementById("SuccessMessage").innerHTML = "success!";
+			}
+	</script>
+
     </head>
 
     <body>
@@ -21,6 +28,17 @@
                     
             </ul>
         </div>
+        
+        <div class = "sign-up">
+        	<div class = "infoBox">Sign up for the next Classic City Fisticuffs!</div>
+        	<br>
+        	<form action = "signUp()">
+        		Username: <input type = "text" id = "username" title = "Username required" required>
+        		<br>
+        		<input type = "submit" value = "Sign up!">
+        	</form>
+        	<div id = "successMessage"></div>
+        </div>
     </body>
     
     <footer> 
@@ -29,6 +47,8 @@
                 <li class="contact">
                     <a href = "https://www.facebook.com/groups/239983529490727/?ref=bookmarks"><img src = "./images/facebooklogo.png" alt = "Facebook Link" ></a>
                     <a href = "https://www.reddit.com/r/smashbros/"><img src = "./images/redditlogo.png" alt = "Reddit Link"></a>
+                    <a href = "https://www.youtube.com/channel/UC9V8o-xhgYkW0fsZF4vvX_g"><img src = "./images/youtubelogo.png" alt = "YouTube Link"></a>
+                    
                 </li>
                 <li class="created">Created by Eric "Don" Holbrook</li>
             </ul>
