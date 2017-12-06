@@ -7,7 +7,44 @@
             <link rel="stylesheet" href="css/header.css">
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
-    
+
+            <!-- script from https://jsfiddle.net/hrohxze0/6/ -->
+            <script>
+                function isbefore(a, b) {
+                    if (a.parentNode == b.parentNode) {
+                        for (var next = a; next; next = next.previousSibling) {
+                            if (next === b) { 
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                } 
+
+                function dragenter(e) {
+                    if (isbefore(source, e.target)) {
+                        e.target.parentNode.insertBefore(source, e.target);
+                    }
+                    else {
+                        e.target.parentNode.insertBefore(source, e.target.nextSibling);
+                    }
+                }
+
+                function dragstart(e) {
+                    source = e.target;
+                    e.dataTransfer.effectAllowed = 'move';
+                }
+
+                function saveListOrder() {
+                    var playerList = [];
+                    var list = document.getElementsByTagName("li");
+                    document.getElementById("test").innerHTML = "m";
+                    for (var x = 0, y = list.length; x < y; ++x){
+                        playerList.push(list[x].firstChild.nodeValue);
+                    }
+                    document.getElementById("test").innerHTML = playerList;
+                }
+            </script>
         </head>
 
         <body>
@@ -19,6 +56,19 @@
                     <li class = "login"><a href = "home.html">Logout</a></li>                      
                 </ul>
             </div>
+
+            <div class = "players">
+                <ol>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 1</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 2</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 3</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 4</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 5</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 6</li>
+                </ol>
+                <button type = "text" onclick = "saveListOrder()">Save List!</button>
+            </div>
+            <div id = "test">test.</div>
         </body>
 
     

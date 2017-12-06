@@ -7,6 +7,25 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
+
+    <script>
+        function accordianFunction(){
+            var acc = document.getElementsByClassName("accordian");
+            var i;
+            for (i = 0; i < acc.length; ++i){
+                acc[i].onclick=function(){
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block"){
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                }
+            }
+        }
+    </script>
+
     </head>
 
     <body>
@@ -16,31 +35,72 @@
                 <li class = "rankings"><a href = "rankings.html">Rankings</a></li>
                 <li class = "tournaments"><a href = "tournaments.html">Tournaments</a></li>
                 <li class = "videos"><a href = "videos.html">Videos</a></li>
+                <li class = "sign-up"><a href = "sign-up.html">Sign-up</a></li>
                 <li class = "login"><a href = "login.html">Login</a></li>
                     
             </ul>
         </div>
 
-        <div class = "video-playlist-table">
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Playlist</th>
-                </tr>
-                <tr>
-                    <td>August 19</td>
-                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" allowfullscreen></iframe></td>
-                </tr>
-                <tr>
-                    <td>June 24</td>
-                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzl-sbXADjb-HpBOYSPwSMf" frameborder="0" allowfullscreen></iframe></td>
-                </tr>
-                <tr>
-                    <td>April 15</td>
-                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjxxH00MP5UZ6GuXGNWy3sv6" frameborder="0" allowfullscreen></iframe></td>
-                </tr>
-            </table>
+     
+     
+
+        <button class = "accordian" onclick = "accordianFunction()">October 28</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjyepCWgsI7ZCEL8OUvsn_bC" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">October 14</button>
+        <div class = "panel">
+            
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">Septemer 30</button>
+        <div class = "panel">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjwkTAD3CzzMV7SXiE8UND38" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">September 16</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjwhdtPbyGSQAidLbdFGo94b" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">September 9</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjxyVSru1omh491yxZQoUZ6t" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+
+        <button class = "accordian" onclick = "accordianFunction()">August 19</button>
+        <div class = "panel">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">June 24</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzl-sbXADjb-HpBOYSPwSMf" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">April 15</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">April 1</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjytaif55A5fjb5c11Vn2IvC" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <button class = "accordian" onclick = "accordianFunction()">February 25</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzrS7CBa6i7bkXR6m00wK1h" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        
+        <button class = "accordian" onclick = "accordianFunction()">February 11</button>
+        <div class = "panel">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzcRsk9VLLKDMyYI3591ci5" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        
+
     </body>
     
 
@@ -50,7 +110,10 @@
             <ul>
                 <li class="contact">
                     <a href = "https://www.facebook.com/groups/239983529490727/?ref=bookmarks"><img src = "./images/facebooklogo.png" alt = "Facebook Link" ></a>
+                    <a href = "https://www.youtube.com/channel/UC9V8o-xhgYkW0fsZF4vvX_g"><img src = "./images/youtubelogo.png" alt = "Youtube Link"></a>
                     <a href = "https://www.reddit.com/r/smashbros/"><img src = "./images/redditlogo.png" alt = "Reddit Link"></a>
+                    <a href = "https://www.youtube.com/channel/UC9V8o-xhgYkW0fsZF4vvX_g"><img src = "./images/youtubelogo.png" alt = "YouTube Link"></a>
+                    
                 </li>
                 <li class="created">Created by Eric "Don" Holbrook</li>
             </ul>
