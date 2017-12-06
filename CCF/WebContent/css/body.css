@@ -1,5 +1,5 @@
 body{
-    background: lightblue;
+    background: oldlace;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -41,6 +41,10 @@ p{
     padding-right: 10px;
 }
 
+.tournamentButton{
+    text-align: center;
+}
+
 button.accordian {
     background-color: darkgray;
     cursor: pointer;
@@ -50,7 +54,7 @@ button.accordian {
     border-width: 1px;
     border: solid;
     border-bottom: none;
-    border-color: lightblue;
+    border-color: oldlace;
     transition: 0.4s;
 }
 
@@ -59,10 +63,15 @@ button.accordian.active, button.accordian.hover {
 }
 
 div.panel {
-    padding: 0 18px;
-    background-color: lightblue;
+    position: relative;
+    left: 11%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 78%;
+    text-align: center;
+    background-color: lightgray;
     display: none;
-    align-content: center;
+
 }
 
 .loginForm {
