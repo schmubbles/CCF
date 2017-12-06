@@ -7,6 +7,8 @@
             <link rel="stylesheet" href="css/header.css">
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
+            <link rel="stylesheet" href="css/admin.css">
+            
 
             <!-- script from https://jsfiddle.net/hrohxze0/6/ -->
             <script>
@@ -42,7 +44,16 @@
                     for (var x = 0, y = list.length; x < y; ++x){
                         playerList.push(list[x].firstChild.nodeValue);
                     }
+                    playerList.splice(0, 3);//because for some reason three elements are added at first.
                     document.getElementById("test").innerHTML = playerList;
+                }
+
+                function addPlayer(){
+
+                }
+
+                function removePlayer(){
+
                 }
             </script>
         </head>
@@ -52,12 +63,36 @@
                 <ul>
                     <li class = "rankings"><a href = "updateRankings.html">Update Rankings</a></li>
                     <li class = "tournaments"><a href = "updateTournaments.html">Update Tournaments</a></li>
-                    <li class = "videos"><a href = "updateVideos.html">Update Videos</a></li>
                     <li class = "login"><a href = "home.html">Logout</a></li>                      
                 </ul>
             </div>
+            
+            <br><br>
+            
+            <div class = "addPlayer">
+                <h3>Add a player:</h3>
+                <br>
+                <form action = "addPlayer()">
+                    Player Tag: <input type = "text" id = "newPlayerTag" title = "Tag Required" required>
+                    <input type = "submit" value = "Add">
+                </form>
+            </div>
 
+            <br><br>
+            
+            <div class = "removePlayer">
+                <h3>Remove a player:</h3>
+                <br>
+                <form action = "removePlayer()">
+                    Player Tag: <input type = "text" id = "newPlayerTag" title = "Tag Required" required>
+                    <input type = "submit" value = "Remove">
+                </form>
+            </div>
+
+            <br><br>
+            
             <div class = "players">
+                <h3>Update Player Rankings!</h3>
                 <ol>
                     <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 1</li>
                     <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 2</li>
@@ -68,7 +103,7 @@
                 </ol>
                 <button type = "text" onclick = "saveListOrder()">Save List!</button>
             </div>
-            <div id = "test">test.</div>
+            <div id = "test"></div>
         </body>
 
     

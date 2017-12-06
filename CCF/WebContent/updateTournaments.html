@@ -7,17 +7,39 @@
             <link rel="stylesheet" href="css/header.css">
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
+            <link rel="stylesheet" href="css/admin.css">
+            
     
+            <script>
+                function addTournament(){
+
+                }
+            </script>
+
         </head>
+
 
         <body>
             <div class = "menu">
                 <ul>
                     <li class = "rankings"><a href = "updateRankings.html">Update Rankings</a></li>
                     <li class = "tournaments"><a href = "updateTournaments.html">Update Tournaments</a></li>
-                    <li class = "videos"><a href = "updateVideos.html">Update Videos</a></li>
                     <li class = "login"><a href = "home.html">Logout</a></li>                      
                 </ul>
+            </div>
+
+            <br>
+            <br>
+            <div class = "newTournament">
+                <h3>New Tournament Entry</h3>
+                <form action = "addTournament()">
+                    Date: &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <input type = "text" id = "tournamentDate" title = "Date Required" required>
+                    <br>
+                    Embed Code: <input type = "text" id = "embedCode"  size = "50" title = "EmbedCode Required" required>
+                    <br>
+                    <br>
+                    <input type = "submit" value = "Add">
+                </form>
             </div>
         </body>
 
