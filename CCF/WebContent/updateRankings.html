@@ -44,7 +44,7 @@
                     for (var x = 0, y = list.length; x < y; ++x){
                         playerList.push(list[x].firstChild.nodeValue);
                     }
-                    playerList.splice(0, 3);//because for some reason three elements are added at first.
+                    playerList.splice(0, 4);//because for some reason three elements are added at first.
                     document.getElementById("test").innerHTML = playerList;
                 }
 
@@ -63,6 +63,7 @@
                 <ul>
                     <li class = "rankings"><a href = "updateRankings.html">Update Rankings</a></li>
                     <li class = "tournaments"><a href = "updateTournaments.html">Update Tournaments</a></li>
+                    <li class = "tournaments"><a href = "updateSignUp.html">Update Sign-up</a></li>                    
                     <li class = "login"><a href = "home.html">Logout</a></li>                      
                 </ul>
             </div>
@@ -105,5 +106,6 @@
             </div>
             <div id = "test"></div>
         </body>
+</html>
 
     
