@@ -11,10 +11,9 @@ import objectLayer.Tournament;
 public class TournamentPersists {
 	
 	public int insertTournament(Tournament t){
-		String query = "INSERT INTO Tournament (Name, numParticipants, Date)" 
-				+ "VALUES ('" + t.getTournamentName()
-				+ "', '" + t.getNumParticipants()
-				+ "', '" + t.getDate()
+		String query = "INSERT INTO Tournament (Date, EmbedCode)" 
+				+ "VALUES ('" + t.getDate()
+				+ "', '" + t.getEmbedCode()
 				+ "')";
 		int ret = DatabaseAccess.create(query);
 		
@@ -34,14 +33,13 @@ public class TournamentPersists {
 	}
 	
 	public Tournament getTournament(String tournamentName) {
-		String query = "SELECT id, Name, numParticipants, Date";
+		String query = "SELECT id, Date, EmbedCode";
 		ResultSet result = DatabaseAccess.retrieve(query);
 		Tournament tournament = null;
 		try {
 			while (result.next()) {
 				tournament = new Tournament(result.getInt("id"),
-						result.getString("Name"),
-						result.getInt("numParticipants"),
+						result.getString("EmbedCode"),
 						result.getDate("Date")
 						);
 			}

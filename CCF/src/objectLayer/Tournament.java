@@ -4,23 +4,12 @@ import java.sql.Date;
 
 public class Tournament {
 	private int id = 0;
-	private String tournamentName = null;
-	private int numParticipants;
-	private Player[] participants;
+	private String EmbedCode;
 	private Date date;
 	
-	public Tournament(int id, String tournamentName, int numParticipants, Player[] participants, Date date) {
+	public Tournament(int id, String EmbedCode, Date date) {
 		this.id = id;
-		this.tournamentName = tournamentName;
-		this.numParticipants = numParticipants;
-		this.participants = participants;
-		this.date = date;
-	}
-	
-	public Tournament(int id, String tournamentName, int numParticipants, Date date) {
-		this.id = id;
-		this.tournamentName = tournamentName;
-		this.numParticipants = numParticipants;
+		this.EmbedCode = EmbedCode;
 		this.date = date;
 	}
 	
@@ -30,29 +19,20 @@ public class Tournament {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getTournamentName() {
-		return tournamentName;
-	}
-	public void setTournamentName(String tournamentName) {
-		this.tournamentName = tournamentName;
-	}
-	public int getNumParticipants() {
-		return numParticipants;
-	}
-	public void setNumParticipants(int numParticipants) {
-		this.numParticipants = numParticipants;
-	}
-	public Player[] getParticipants() {
-		return participants;
-	}
-	public void setParticipants(Player[] participants) {
-		this.participants = participants;
-	}
+	
 	public Date getDate() {
 		return date;
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public String getEmbedCode() {
+		return EmbedCode;
+	}
+
+	public void setEmbedCode(String embedCode) {
+		EmbedCode = embedCode;
 	}
 	
 	

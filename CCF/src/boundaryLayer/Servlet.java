@@ -94,14 +94,14 @@ public class Servlet extends HttpServlet {
 		
 		Map<String,Object> root = new HashMap<String,Object>();
 		 
-		 root.put("Players", players); 
+		root.put("Players", players); 
 		 
-		 try 
-		 {
+		try 
+		{
 			resultTemplate.process(root, toClient);
-		 } 
-		 catch (TemplateException e) 
-		 {
+		} 
+		catch (TemplateException e) 
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
