@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
-    	<script src = "./javascript/signup.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <script src = "./javascript/signup.js"></script>
 
     </head>
 
@@ -19,14 +20,15 @@
                 <li class = "tournaments"><a href = "tournaments.html">Tournaments</a></li>
                 <li class = "sign-up"><a href = "sign-up.html">Sign-up</a></li>
                 <li class = "login"><a href = "login.html">Login</a></li>
-                    
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src = "./javascript/signup.js"></script>
             </ul>
         </div>
 
         <br>
         <div class = "sign-up">
         	<h3>Sign up for the next Classic City Fisticuffs!</h3>
-        	<form action = "JavaScript:signUp()">
+        	<form id = "signupForm">
         		Username: <input type = "text" id = "username" title = "Username required" placeholder = "tag" required>
         		<br>
         		<input type = "submit" value = "Sign up!">
@@ -39,8 +41,10 @@
         <div id = "PlayerSignUpList" class = "playerSignUp">
             <h3>Players Signed up</h3> 
             <ol>
-                <li>Player 1</li>
-                <li>Player 2</li>
+                <div id = "playerOrderedList">
+                    <li>Player 1</li>
+                    <li>Player 2</li>
+                </div>
             </ol>
         </div>
 

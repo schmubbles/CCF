@@ -7,25 +7,8 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
-
-    <script>
-        function accordianFunction(){
-            var acc = document.getElementsByClassName("accordian");
-            var i;
-            for (i = 0; i < acc.length; ++i){
-                acc[i].onclick=function(){
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block"){
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                }
-            }
-        }
-    </script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src = "./javascript/tournaments.js"></script>
     </head>
 
     <body>
@@ -41,85 +24,85 @@
         </div>
 
      
-     
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()" align = "center">October 28</button>
-            <div class = "panel" >
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjyepCWgsI7ZCEL8OUvsn_bC" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <div id = "tournamentContainer">
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()" align = "center">October 28</button>
+                <div class = "panel" >
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjyepCWgsI7ZCEL8OUvsn_bC" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
 
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">October 14</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjyLEH0lqpjZ1BEbrHjMYijU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>        
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">October 14</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjyLEH0lqpjZ1BEbrHjMYijU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>        
 
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">September 30</button>
-            <div class = "panel">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjwkTAD3CzzMV7SXiE8UND38" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>  
-        </div>
-        
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">September 30</button>
+                <div class = "panel">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjwkTAD3CzzMV7SXiE8UND38" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>  
+            </div>
+            
 
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">September 16</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjwhdtPbyGSQAidLbdFGo94b" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">September 16</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjwhdtPbyGSQAidLbdFGo94b" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">September 9</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjxyVSru1omh491yxZQoUZ6t" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">August 19</button>
+                <div class = "panel">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">June 24</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzl-sbXADjb-HpBOYSPwSMf" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">April 15</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">April 1</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjytaif55A5fjb5c11Vn2IvC" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">February 25</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzrS7CBa6i7bkXR6m00wK1h" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class = "tournamentButton">
+                <button class = "accordian" onclick = "accordianFunction()">February 11</button>
+                <div class = "panel">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzcRsk9VLLKDMyYI3591ci5" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">September 9</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjxyVSru1omh491yxZQoUZ6t" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">August 19</button>
-            <div class = "panel">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">June 24</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzl-sbXADjb-HpBOYSPwSMf" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">April 15</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzOLoPbIJgMW-6eDOzHOq_m" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">April 1</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjytaif55A5fjb5c11Vn2IvC" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">February 25</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzrS7CBa6i7bkXR6m00wK1h" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class = "tournamentButton">
-            <button class = "accordian" onclick = "accordianFunction()">February 11</button>
-            <div class = "panel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLMmZ7mHgbxjzcRsk9VLLKDMyYI3591ci5" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-        
 
     </body>
     

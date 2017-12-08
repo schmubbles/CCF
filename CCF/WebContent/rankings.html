@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src = "./javascript/rankings.js"></script>
     </head>
 
     <body>
@@ -24,23 +26,25 @@
 
         <div class = "ranks" >
             <h1>Athens Georgia Melee Power Rankings</h1>
-            <table align="center">
-                <tr>
-                    <th>Rank</th>
-                    <th>Tag</th>
-                </tr>
-                <tr>
-                    <td>1.</td>                    
-                    <td>RobinHood</td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>DCW</td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>Bottle</td>
-                </tr>    
+            <table id = "playerTable" align="center">
+                <tbody id = "playerContainer">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Tag</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>                    
+                        <td>RobinHood</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>DCW</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Bottle</td>
+                    </tr>    
+                </tbody>
             </table>
         </div>
     </body>
