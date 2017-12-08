@@ -101,3 +101,9 @@ div.sign-up{
 div.playerSignUp{
     margin-left: 5%;
 }
+
+div.failure{
+    size: 18px;
+    color: darkred;
+    font-weight: bold;
+}

@@ -8,35 +8,10 @@
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
             <link rel="stylesheet" href="css/admin.css">
-            
+            <script src = "./javascript/dragger.js"></script>
 
-            <!-- script from https://jsfiddle.net/hrohxze0/6/ -->
             <script>
-                function isbefore(a, b) {
-                    if (a.parentNode == b.parentNode) {
-                        for (var next = a; next; next = next.previousSibling) {
-                            if (next === b) { 
-                                return true;
-                            }
-                        }
-                    }
-                    return false;
-                } 
-
-                function dragenter(e) {
-                    if (isbefore(source, e.target)) {
-                        e.target.parentNode.insertBefore(source, e.target);
-                    }
-                    else {
-                        e.target.parentNode.insertBefore(source, e.target.nextSibling);
-                    }
-                }
-
-                function dragstart(e) {
-                    source = e.target;
-                    e.dataTransfer.effectAllowed = 'move';
-                }
-
+    
                 function saveListOrder() {
                     var playerList = [];
                     var list = document.getElementsByTagName("li");

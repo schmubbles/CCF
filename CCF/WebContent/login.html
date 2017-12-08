@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
+        <script src = "./javascript/login.js"></script>
+
     </head>
 
     <body>
@@ -30,14 +32,17 @@
         <br>
 
         <div class = "loginForm">
-            <form action = "JavaScript:submitFunction()">    
+            <form action = "JavaScript:loginFunction()">    
                 Username: <input type = "text" id = "username" class = "username" title = "Username required" required>
                 <br>
                 Password: &nbsp<input type = "text" id = "password" class = "password" title = "password required" required>
                 <br>
                 <br>
-                <input class = "submitButton" id = "submitButton" type = "submit" value = "Submit">
+                <input class = "submitButton" id = "submitButton" type = "submit" value = "submit">
             </form>
+        </div>
+        <div class = "loginForm failure" id = "failure">
+
         </div>
         <br>
         <br>
