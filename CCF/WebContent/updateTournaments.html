@@ -8,6 +8,7 @@
             <link rel="stylesheet" href="css/body.css">
             <link rel="stylesheet" href="css/footer.css">
             <link rel="stylesheet" href="css/admin.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>      
             <script src = "./javascript/updateTournament.js"></script>
     
         </head>
@@ -27,7 +28,7 @@
             <br>
             <div class = "newTournament">
                 <h3>New Tournament Entry</h3>
-                <form action = "JavaScript:addTournament()">
+                <form id = "addTournament">
                     Date: &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <input type = "text" id = "tournamentDate" title = "Date Required" placeholder="date" required>
                     <br>
                     Embed Code: <input type = "text" id = "embedCode"  size = "50" title = "EmbedCode Required" placeholder="embedded code" required>

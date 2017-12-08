@@ -1,8 +1,18 @@
-function addTournament(){
-    var date = document.getElementById("tournamentDate").value;
-    var embedCode = document.getElementById("embedCode").value;
-
-    var tester = date.concat(embedCode);
-    alert(tester);
-}
+$(document).ready(function(){
     
+    $("#addTournament").submit(function(event){
+        event.preventDefault();
+
+        
+        $.ajax({
+            url:"addTournament",
+            type:"POST",
+            dataType: "json",
+            data: $("#addTournament").serialize(),
+            success: function(data){
+
+            }
+        });
+        return false;
+    });
+});

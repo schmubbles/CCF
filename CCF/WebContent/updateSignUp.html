@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/admin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>      
         <script src = "./javascript/dragger.js"></script>
         <script src = "./javascript/updateSignUp.js"></script>
     </head>
@@ -25,12 +26,14 @@
         <div class = "players">
             <h3>Update Upcoming Tournament Rankings!</h3>
             <ol>
-                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 1</li>
-                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 2</li>
-                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 3</li>
-                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 4</li>
-                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 5</li>
-                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 6</li>
+                <div id = "playerContainer">
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 1</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 2</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 3</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 4</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 5</li>
+                    <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 6</li>
+                </div>
             </ol>
             <button type = "text" onclick = "JavaScript:saveListOrder()">Save List!</button>
         </div>
@@ -40,7 +43,7 @@
         <br>
 
         <div class = "deleteSignUp">
-            <button type = "button" class = "signUpButton" onclick="JavaScript:deleteList()">Delete Current List</button>
+            <button type = "button" class = "deletePlayerButton" id = "deletePlayerList">Delete Current List</button>
         </div>
     </body>
 
