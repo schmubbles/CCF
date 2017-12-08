@@ -7,12 +7,7 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/footer.css">
-
-	<script>
-		function signUp(){
-			document.getElementById("SuccessMessage").innerHTML = "success!";
-			}
-	</script>
+    	<script src = "./javascript/signup.js"></script>
 
     </head>
 
@@ -32,7 +27,7 @@
         <div class = "sign-up">
         	<h3>Sign up for the next Classic City Fisticuffs!</h3>
         	<form action = "signUp()">
-        		Username: <input type = "text" id = "username" title = "Username required" required>
+        		Username: <input type = "text" id = "username" title = "Username required" placeholder = "tag" required>
         		<br>
         		<input type = "submit" value = "Sign up!">
         	</form>
