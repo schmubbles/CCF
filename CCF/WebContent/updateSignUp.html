@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Update Sign-Up</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">        
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/admin.css">
+        <script src = "./javascript/dragger.js"></script>
+        <script src = "./javascript/updateSignUp.js"></script>
+    </head>
+
+    <body>
+        <div class = "menu">
+            <ul>
+                <li class = "rankings"><a href = "updateRankings.html">Update Rankings</a></li>
+                <li class = "tournaments"><a href = "updateTournaments.html">Update Tournaments</a></li>
+                <li class = "tournaments"><a href = "updateSignUp.html">Update Sign-up</a></li>
+                <li class = "login"><a href = "home.html">Logout</a></li>                      
+            </ul>
+        </div>
+
+        <div class = "players">
+            <h3>Update Upcoming Tournament Rankings!</h3>
+            <ol>
+                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 1</li>
+                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 2</li>
+                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 3</li>
+                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 4</li>
+                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 5</li>
+                <li class = "player" draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)"" ">Player 6</li>
+            </ol>
+            <button type = "text" onclick = "JavaScript:saveListOrder()">Save List!</button>
+        </div>
+        <div id = "test"></div>
+
+        <br>
+        <br>
+
+        <div class = "deleteSignUp">
+            <button type = "button" class = "signUpButton" onclick="JavaScript:deleteList()">Delete Current List</button>
+        </div>
+    </body>
+
+</html>
