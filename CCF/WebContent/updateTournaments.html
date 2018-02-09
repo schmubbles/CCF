@@ -28,14 +28,43 @@
             <br>
             <div class = "newTournament">
                 <h3>New Tournament Entry</h3>
-                <form id = "addTournament">
-                    Date: &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <input type = "text" id = "tournamentDate" title = "Date Required" placeholder="date" required>
+                <select id = "selector">
+                    <option value = "drop-down-header">Select Type</option>
+                    <option value = "fileEnter">Enter a File (.txt)</option>
+                    <option value = "manualAddTournament">Enter Manually</option>
+                </select>
+                
+                <div id = "fileEnter" class = "group">
                     <br>
-                    Embed Code: <input type = "text" id = "embedCode"  size = "50" title = "EmbedCode Required" placeholder="embedded code" required>
-                    <br>
-                    <br>
-                    <input type = "submit" value = "Add">
-                </form>
+                    <form id = "fileEnterForm">
+                        File Location: <input type="button" id="file-button" value="Select Files">
+                                       <input type="file" name="my_file" id="my-file">
+                        <br>
+                        <br>
+                        <input type = "submit" value = "Add Tournament">
+                    </form>
+                </div>
+                
+                <div id = "manualAddTournament" class = "group">
+                        <br>
+                        Date: &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <input type = "text" id = "tournamentDate" title = "Date Required" placeholder="date" required>
+                        <br><br>
+                        Tournament Results<br>
+                        <table id = "playerTable">
+                            <tbody>
+                                <tr><th>Winner</th><th>Loser</th></tr>
+                            </tbody>
+                        </table><br>
+                        <h5>Add Players</h5>
+                        <form id = "addPlayer">     
+                            <input type = "text" id = "playerOne" placeholder = "winner" required>
+                            <input type = "text" id = "playerTwo" placeholder = "loser" required>
+                            <br><br>
+                            <input type = "submit" value = "Add Player">
+                        </form>
+                    <br><br>
+                    <input type = "button" value = "Add Tournament">
+                </div>
             </div>
         </body>
 
