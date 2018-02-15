@@ -36,18 +36,20 @@
                 
                 <div id = "fileEnter" class = "group">
                     <br>
-                    <form id = "fileEnterForm">
-                        File Location: <input type="button" id="file-button" value="Select Files">
-                                       <input type="file" name="my_file" id="my-file">
-                        <br>
-                        <br>
+                    Date: <input type = "date" class = "date-entry" id = "tournamentDate" title = "Date Required" placeholder="date" required>
+                    <br><br>
+                    <form method = "post" id = "fileEnterForm">
+                        <input type="button" id="file-button" value="Select Files">
+                        <input type="file" name="my-file" id="my-file" hidden>
+                        <span id = "file-path">No file uploaded</span>
+                        <br><br>
                         <input type = "submit" value = "Add Tournament">
                     </form>
                 </div>
                 
                 <div id = "manualAddTournament" class = "group">
                         <br>
-                        Date: &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp  <input type = "text" id = "tournamentDate" title = "Date Required" placeholder="date" required>
+                        Date: <input type = "date" class = "date-entry" id = "tournamentDate" title = "Date Required" placeholder="date" required>
                         <br><br>
                         Tournament Results<br>
                         <table id = "playerTable">
@@ -55,6 +57,7 @@
                                 <tr><th>Winner</th><th>Loser</th></tr>
                             </tbody>
                         </table><br>
+                        <input type = "button" id = "playerRemoveButton" value = "Remove last row">
                         <h5>Add Players</h5>
                         <form id = "addPlayer">     
                             <input type = "text" id = "playerOne" placeholder = "winner" required>
@@ -63,7 +66,7 @@
                             <input type = "submit" value = "Add Player">
                         </form>
                     <br><br>
-                    <input type = "button" value = "Add Tournament">
+                    <input type = "button" value = "Add Tournament" id = "manualAddTournamentButton">
                 </div>
             </div>
         </body>
