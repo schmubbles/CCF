@@ -1,31 +1,50 @@
 
 $(document).ready(function(){
    
-    $('.group').hide(); 
+    $('.group').hide(); //hide all groups at the beginning
 
-    $("#selector").change(function(){
+    $("#selector").change(function(){//shows which input the user is using
         $('.group').hide();        
         $('#'+$(this).val()).show();
     });
 
-    $('#file-button').click(function(){
+    $('#file-button').click(function(){//opens fileSelect
         $('#my-file').click();
     });
 
-    $("#fileEnterForm").submit(function(event) {
+    $("#my-file").change(function(e){//changes fileName visible
+        var fileName = $("#my-file").val();
+        $("#file-path").text(fileName);
+    });
+
+    $("#fileEnterForm").submit(function(event) {//submit a file
         alert("sumbit");
     });
 
-    $("#addPlayer").submit(function(){
-        $("#playerTable > tbody:last-child").append("<tr><td>" + $("#playerOne").val() + "</td><td>" + $("#playerTwo").val() + "</td></tr>");
+    $("#addPlayer").submit(function(){//add a player table row manually
+        $("#playerTable > tbody:last-child").append("<tr><td><input class = \"playerInput\" type = \"text\" value = \"" + $("#playerOne").val() 
+            + "\"></td><td><input class = \"playerInput\" type = \"text\" value = \"" + $("#playerTwo").val() 
+            + "\"></td></tr>");
         $("#playerOne").val("");
         $("#playerTwo").val("");
         return false;
     });
 
-    $("#addTournament").submit(function(event){
+    $("#playerOneText").click(function(){
+        alert("yo");
+    });
+
+    $("#playerRemoveButton").click(function(){//removes the last row in the table
+        var str = $("#playerTable").html();
+        if (str.indexOf("<td>") >= 0){
+            $("#playerTable tr:last").remove();
+        }
+    });
+
+    $("#manualAddTournamentButton").click(function(event){//submit a manual tournament
         event.preventDefault();
 
+        getPlayerList();
         
         $.ajax({
             url:"addTournament",
@@ -38,4 +57,14 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    var getPlayerList = function(){
+        var str = "";
+
+        $(".playerInput").each(function(){
+            alert(this.val());
+//            str += this.val();
+        });
+        alert(str);
+    }
 });
